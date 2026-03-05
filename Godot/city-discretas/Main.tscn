@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://dpsp0wortcby8"]
-
-[ext_resource type="Script" uid="uid://cjk5cj30tscjf" path="res://RoadSystem.gd" id="1_glv2v"]
-
-[node name="Main" type="Node2D" unique_id=1632183906]
-script = ExtResource("1_glv2v")

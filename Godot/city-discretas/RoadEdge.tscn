@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://b7uiu5uoopeiu"]
-
-[ext_resource type="Script" uid="uid://caiwyqvahafiq" path="res://RoadEdge.gd" id="1_104rx"]
-
-[node name="RoadEdge" type="Node2D" unique_id=1534823778]
-script = ExtResource("1_104rx")
-
-[node name="Line" type="Line2D" parent="." unique_id=1022869884]
