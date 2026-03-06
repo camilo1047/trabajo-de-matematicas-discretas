@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dl5jqlqlwvtnx"]
+
+[ext_resource type="Texture2D" uid="uid://bbtk75a1reb3w" path="res://Sprites/esprite pedorro1.png" id="1_0w0la"]
+[ext_resource type="Script" uid="uid://e6wgmchfqxc1" path="res://Scripts/vias.gd" id="1_hmx81"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hmx81"]
+size = Vector2(32, 32)
+
+[node name="vias" type="Node2D" unique_id=1714025829]
+script = ExtResource("1_hmx81")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1011990620]
+texture = ExtResource("1_0w0la")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=392944991]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=776762657]
+shape = SubResource("RectangleShape2D_hmx81")
+
+[node name="abajo" type="RayCast2D" parent="." unique_id=1545263617]
+target_position = Vector2(0, 25)
+collision_mask = 2
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="derecha" type="RayCast2D" parent="." unique_id=1387766868]
+target_position = Vector2(25, 0)
+collision_mask = 2
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="izquierda" type="RayCast2D" parent="." unique_id=518363815]
+target_position = Vector2(-25, 0)
+collision_mask = 2
+collide_with_areas = true
+
+[node name="arriba" type="RayCast2D" parent="." unique_id=119633291]
+target_position = Vector2(0, -25)
+collision_mask = 2
+collide_with_areas = true
+collide_with_bodies = false
