@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ctpgevoqepgfn"]
+
+[ext_resource type="Texture2D" uid="uid://d2pjvukj2kbdm" path="res://Sprites/grass.png" id="1_wayha"]
+
+[node name="Pasto" type="Node2D" unique_id=975009573 groups=["pasto"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=293474331]
+texture = ExtResource("1_wayha")
