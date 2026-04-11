@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://ckn63sl8sibf8"]
+
+[ext_resource type="Script" uid="uid://bl5f5bf4raw8t" path="res://Scripts/seleccion_de_partidas.gd" id="1_btdwp"]
+
+[node name="Seleccion de Partidas" type="Control" unique_id=2129306063]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_btdwp")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=310186983]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.654902, 0.21568628, 0.69803923, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=531016066]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.5
+offset_top = -50.5
+offset_right = 196.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Nueva Partida" type="Button" parent="VBoxContainer" unique_id=705901460]
+layout_mode = 2
+text = "Nueva Partida"
+
+[node name="Cargar Partida" type="Button" parent="VBoxContainer" unique_id=1279389097]
+layout_mode = 2
+text = "Cargar Partida"
+
+[node name="Volver" type="Button" parent="VBoxContainer" unique_id=111463768]
+layout_mode = 2
+text = "Volver"
+
+[connection signal="pressed" from="VBoxContainer/Nueva Partida" to="." method="_on_nueva_partida_pressed"]
+[connection signal="pressed" from="VBoxContainer/Cargar Partida" to="." method="_on_cargar_partida_pressed"]
+[connection signal="pressed" from="VBoxContainer/Volver" to="." method="_on_volver_pressed"]
