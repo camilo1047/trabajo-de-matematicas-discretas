@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://bgla1lrqagcix"]
+
+[ext_resource type="Script" uid="uid://dmpb05des36sj" path="res://Backend/scenes/Juego/juego.gd" id="1_xks33"]
+[ext_resource type="Script" uid="uid://53ael25s7hlf" path="res://Backend/scenes/Juego/tilemap.gd" id="2_h15dd"]
+[ext_resource type="Script" uid="uid://bscpxqoog666w" path="res://Backend/scenes/Juego/HUD.gd" id="2_knwrx"]
+[ext_resource type="Script" uid="uid://xc4enke0rbvh" path="res://Backend/scenes/Juego/tienda.gd" id="3_y27s8"]
+
+[node name="juego" type="Node2D" unique_id=191009771]
+script = ExtResource("1_xks33")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1155086007]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1200713077]
+script = ExtResource("2_h15dd")
+
+[node name="Objetos" type="Node2D" parent="." unique_id=1700757930]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=852745247]
+
+[node name="HUD" type="Node2D" parent="CanvasLayer" unique_id=241746098]
+script = ExtResource("2_knwrx")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/HUD" unique_id=1785460177]
+custom_minimum_size = Vector2(0, 48)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LblDinero" type="Label" parent="CanvasLayer/HUD/HBoxContainer" unique_id=144529114]
+layout_mode = 2
+
+[node name="LblEnergia" type="Label" parent="CanvasLayer/HUD/HBoxContainer" unique_id=385493514]
+layout_mode = 2
+
+[node name="LblMateriales" type="Label" parent="CanvasLayer/HUD/HBoxContainer" unique_id=1710549401]
+layout_mode = 2
+
+[node name="LblPoblacion" type="Label" parent="CanvasLayer/HUD/HBoxContainer" unique_id=2095608751]
+layout_mode = 2
+
+[node name="Tienda" type="Node2D" parent="CanvasLayer" unique_id=888171738]
+visible = false
+script = ExtResource("3_y27s8")
+
+[node name="PanelTienda" type="PanelContainer" parent="CanvasLayer/Tienda" unique_id=23764825]
+custom_minimum_size = Vector2(900, 60)
+offset_left = 10.0
+offset_top = 600.0
+offset_right = 210.0
+offset_bottom = 900.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Tienda/PanelTienda" unique_id=1110276018]
+custom_minimum_size = Vector2(180, 35)
+layout_mode = 2
+
+[node name="BtnCasaPequena" type="Button" parent="CanvasLayer/Tienda/PanelTienda/VBoxContainer" unique_id=1283716215]
+custom_minimum_size = Vector2(200, 45)
+layout_mode = 2
+
+[node name="BtnCasaMediana" type="Button" parent="CanvasLayer/Tienda/PanelTienda/VBoxContainer" unique_id=1852759779]
+custom_minimum_size = Vector2(200, 45)
+layout_mode = 2
+
+[node name="BtnCasaGrande" type="Button" parent="CanvasLayer/Tienda/PanelTienda/VBoxContainer" unique_id=103935881]
+layout_mode = 2
+
+[node name="BtnParque" type="Button" parent="CanvasLayer/Tienda/PanelTienda/VBoxContainer" unique_id=1801895018]
+layout_mode = 2
+
+[node name="BtnCarretera" type="Button" parent="CanvasLayer/Tienda/PanelTienda/VBoxContainer" unique_id=124926888]
+layout_mode = 2
